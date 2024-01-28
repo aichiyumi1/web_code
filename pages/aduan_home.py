@@ -101,7 +101,15 @@ def page_3():
     # 显示查询内容
     if word in words_dict:
         # 输出查询的单词内容
-        cixing, ciyi = words_dict[word][1].split('.')
+        cixing = ''
+        ciyi=''
+        if '  ' in words_dict[word][1]:
+            cy1= words_dict[word][1].split('  ')
+            for i in cy1:
+                cixing += i.split('.')[0]+'. ；'
+                ciyi += i.split('.')[1]+' ；'
+        else:
+            cixing, ciyi = words_dict[word][1].split('.')
         st.write('单词的意思是：', ciyi)
         st.text('单词的词性是：' + cixing + '.')
         st.text('这是词典中的第' + str(words_dict[word][0]) + '个单词')
