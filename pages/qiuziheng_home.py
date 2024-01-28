@@ -176,7 +176,7 @@ def page7():
             j = random.sample(words_dict.keys(), 1)
             words.append(j)
         #break
-    word .progress(0, '准备开始单词记忆挑战！')
+    word.progress(0, '准备开始单词记忆挑战！')
     for i in range(1, 5, 1):
         time.sleep(8)
         word.progress(i*25, words[+i])
