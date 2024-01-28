@@ -219,5 +219,5 @@ elif page == '词典' :
     page5()
 elif page == '留言区' :
     page6()
-elif page == '猜单词':
-    page7()
+# elif page == '猜单词':
+#     page7()
